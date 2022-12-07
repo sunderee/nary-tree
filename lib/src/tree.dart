@@ -5,6 +5,7 @@ import 'package:nary_tree/src/node.dart';
 
 class Tree<T> {
   Node<T>? _root;
+  Node<T>? get rootNode => _root;
 
   bool get isEmpty => _root == null;
   bool get isNotEmpty => _root != null;

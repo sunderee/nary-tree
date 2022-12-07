@@ -6,14 +6,6 @@ class Node<T> {
 
   Node({required this.data});
 
-  @override
-  String toString() {
-    final props = [data, parent, List<Node<T>>.from(children)]
-        .map((item) => item.toString())
-        .join(', ');
-    return '$runtimeType: $props';
-  }
-
   void setParent(Node<T> parent) {
     parent = parent;
   }

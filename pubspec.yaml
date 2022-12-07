@@ -1,0 +1,14 @@
+name: nary_tree
+description: Generic n-ary tree implementation in Dart
+version: 1.0.0
+publish_to: "none"
+
+environment:
+  sdk: ">=2.19.0-374.1.beta <3.0.0"
+
+dependencies:
+  collection: ^1.17.0
+
+dev_dependencies:
+  lints: ^2.0.1
+  test: ^1.22.0

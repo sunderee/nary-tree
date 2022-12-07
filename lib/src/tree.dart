@@ -47,22 +47,27 @@ class Tree<T> {
     return temporaryNode;
   }
 
-  List<Node<T>> preOrderTraversal(Node<T> node) {
+  List<Node<T>> preOrderTraversal() {
     final List<Node<T>> result = [];
-    _preOrderTraversal(node, result);
+    if (_root != null) {
+      _preOrderTraversal(_root!, result);
+    }
 
     return result;
   }
 
-  List<Node<T>> postOrderTraversal(Node<T> node) {
+  List<Node<T>> postOrderTraversal() {
     final List<Node<T>> result = [];
-    _postOrderTraversal(node, result);
+
+    if (_root != null) {
+      _postOrderTraversal(_root!, result);
+    }
 
     return result;
   }
 
-  List<Node<T>> inOrderTraversal(Node<T> node) {
-    return _inOrderTraversal(node);
+  List<Node<T>> inOrderTraversal() {
+    return _root != null ? _inOrderTraversal(_root!) : [];
   }
 
   void _preOrderTraversal(Node<T> node, List<Node<T>> result) {

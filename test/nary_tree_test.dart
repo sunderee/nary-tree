@@ -115,7 +115,7 @@ void main() {
 
   group('traversal', () {
     test('pre-order traversal', () {
-      final result = tree.preOrderTraversal(root);
+      final result = tree.preOrderTraversal();
       expect(
         result.map((item) => item.data),
         [1, 3, 5, 6, 2, 4],
@@ -123,7 +123,7 @@ void main() {
     });
 
     test('post-order traversal', () {
-      final result = tree.postOrderTraversal(root);
+      final result = tree.postOrderTraversal();
       expect(
         result.map((item) => item.data),
         [5, 6, 3, 2, 4, 1],
@@ -131,7 +131,7 @@ void main() {
     });
 
     test('in-order traversal', () {
-      final result = tree.inOrderTraversal(root);
+      final result = tree.inOrderTraversal();
       expect(
         result.map((item) => item.data),
         [1, 3, 2, 4, 5, 6],
